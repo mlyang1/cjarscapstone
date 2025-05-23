@@ -1,0 +1,109 @@
+:root {
+  --nav-color: yellow;
+  --nav-hover: white;
+  --link-color: blue;
+  --link-hover: black;
+  --overlay-text: white;
+  --overlay-bg: rgba(10, 10, 10, 0.85);
+  --default-bg: cyan;
+}
+
+h1{
+  color: orangered;
+  font-size: 50px;
+  margin: auto;
+}
+
+body {
+  margin: 200px 100px 120px 80px;
+  padding: 0;
+  font-family: Lucida Sans Typewriter;
+
+  font-style: normal;
+  background-color: var(--default-bg);
+}
+
+.nav-span {
+  background-color: black;
+  padding: 2px 3px;
+  color: var(--nav-color);
+}
+
+.nav {
+  display: inline-block;
+  padding: 24px 12px;
+  padding-right: 18px;
+  align-items: center;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 18px;
+  z-index: 100;
+}
+
+.nav-ul {
+  display: inline;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-ul li {
+  padding: 3px;
+}
+
+.nav-li a, .nav-li a:visited, .nav-li span {
+  font-style: normal;
+  color: var(--nav-color);
+}
+
+.nav-li a:hover {
+  color: var(--nav-hover);
+}
+
+.nav-span {
+  padding: 2px 3px;
+}
+
+/**** nav.js START ****/
+.nav-ul .hidden {
+  display: none;
+}
+.nav-span.wip {
+  text-decoration: line-through;
+}
+#nav-mobile-show-link {
+  text-decoration: none;
+}
+.nav-ul--monitor:hover .hidden {
+  display: block;
+}
+.nav-ul--monitor:hover #nav-mobile-show {
+  display: none;
+}
+
+.gbook--arrow > span {
+  margin-right: -14px;
+}
+.gbook--arrow > span > span {
+  font-size: 90%;
+  white-space: nowrap;
+}
+.gbook > span {
+  color: var(--nav-color, blue);
+}
+.gbook a:hover + span {
+  /* arrow changes color only on link hover*/
+  color: var(--nav-hover, blue);
+}
+/**** nav.js END ****/
+
+
+.projects {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 10px;
+
+    overflow-x: auto;
+}
+
