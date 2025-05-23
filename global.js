@@ -104,7 +104,7 @@ export function renderProjects(
 
 //Use the fetchJSON function to load the project data from a JSON file.
 //This code assumes your projects.json file is located in a lib folder relative to the current file.
-let projects = await fetchJSON("../cjars capstone spreadsheet - zine library.json");
+let projects = await fetchJSON("../json_files/cjars capstone spreadsheet - zine library.json");
 //Select the container where you want to render the project articles. Use the following snippet:
 //Ensure your HTML includes a container with the class projects.
 const projectsContainer = document.querySelector(".projects");
