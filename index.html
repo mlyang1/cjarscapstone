@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cjars capstone𝒍</title>
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/zines.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <script type="module" src="global.js"></script>
+</head>
+
+<body>
+  <h1>environmental/radical education hub, environmental activist network, activist organization mapping</h1>
+  <p>A tool for increasing educational access and interconnectivity to encourage activism.
+    Conceptually based on the “root” network continuously modeled and encouraged by Professor Lewis.
+  </p>
+
+
+
+
+
+</body>
+
+
+<div id="nav" class="nav">
+  <ul class="nav-ul nav-ul--monitor">
+    <li class="nav-li"><a class="nav-span" href="/">home</a></li>
+    <li class="nav-li"><a class="nav-span" href="/about.html">about</a></li>
+    <hr>
+    <li class="nav-li"><a class="nav-span" href="/library.html">a people’s digital library</a></li>
+    <li class="nav-li"><a class="nav-span" href="/contact.html">community contact portal</a></li>
+    
+
+  </ul>
+</div>
+
+
+
+
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝒂 𝒑𝒆𝒐𝒑𝒍𝒆’𝒔 𝒅𝒊𝒈𝒊𝒕𝒂𝒍 𝒍𝒊𝒃𝒓𝒂𝒓𝒚 𝒐𝒇 𝒄𝒍𝒊𝒎𝒂𝒕𝒆 𝒂𝒄𝒕𝒊𝒗𝒊𝒔𝒎 / 𝒄𝒍𝒊𝒎𝒂𝒕𝒆 𝒆𝒅𝒖𝒄𝒂𝒕𝒊𝒐𝒏 𝒉𝒖𝒃 𝒅𝒊𝒈𝒊𝒕𝒂𝒍 𝒕𝒐𝒐𝒍</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/zines.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js" type="application/javascript"></script>
+    <script src="/js/browser.js" type="application/javascript"></script>
+    <script src="/js/colors.js?v=210206" type="application/javascript"></script>
+    <script src="/js/lodash.js" type="application/javascript"></script>
+    <script type="application/javascript">
+    const CURR_PAGE = 'zines';
+
+    // animation settings
+    const s = 160;
+    const b = 255;
+    const a = 5;
+    let t = 0;
+    const showTieDye = true;
+    const allowAnimateTieDye = showTieDye && !isMobileOrTablet();
+
+    // animation state
+    let animateTieDye = allowAnimateTieDye;
+    let isPaused = false;
+
+    function windowResized() {
+      resizeCanvas(windowWidth, windowHeight);
+      resized = true;
+      if (!animateTieDye) tiedye();
+    }
+
+    function setup() {
+      if (!showTieDye) return;
+      const canvas = createCanvas(windowWidth, windowHeight);
+      canvas.parent('bg');
+      frameRate(3);
+      colorMode(HSB, 256);
+      noStroke();
+      if (!allowAnimateTieDye) {
+        document.getElementById('esc-tip').className += ' tip--mobile';
+      }
+      initTiedye();
+      tiedye();
+    }
+
+    function draw() {
+      if (!showTieDye) return;
+      if (animateTieDye && !isPaused) {
+        tiedye();
+        t++;
+      }
+    }
+
+    function keyPressed() {
+      if (allowAnimateTieDye && keyCode === ESCAPE) animateTieDye = !animateTieDye;
+    }
+
+    // called in zines.js while menu is opening/closing
+    function pauseTieDye() {
+      isPaused = true;
+      setTimeout(() => {
+        isPaused = false
+      }, 1001);
+    }
+    </script>
+  </head>
+  <body>
+    <div id="bg"></div>
+    <div id="nyanseongs">
+      <h1 class="nyanseong"></h1>
+      <h1 class="nyanseong nyanseong--clone"></h1>
+    </div>
+    <div id="nav" class="nav"></div>
+    <div id="new-gallery" class="gallery"></div>
+    <div id="controls" class="bar">
+      <a id="label-link">hide labels</a>
+      <a id="show-link">show menu</a>
+    </div>
+    <div id="popup" class="overlay popup popup--hidden">
+      <div class="popup-inner">
+        <h2>welcome to my zine* collection!</h2>
+        <p><b>what is a zine?</b> it is a broadly defined term, but personally i define it as a self- or independently- published magazine. (i lengthily elaborate on this in <a href="/journal.html?entry=zines">my journal</a>)</p>
+        <p><b>*</b> = i'll be sharing zines as well as comics / art books / magazines that i've collected over the last few years. for now i will be excluding zines that i only have a digital copy of.</p>
+        <p>NOTE: the order of zines shown is randomly shuffled on every visit, to keep your browsing experience fresh :)</p>
+        <h3>planned changes</h3>
+        <ul>
+          <li><b>more zines</b>, with an option to sort by added date</li>
+          <li>some way to filter by keyword or type</li>
+          <li>an html-only version, with a list of all zines featured</li>
+        </ul>
+        <h3>changelog</h3>
+        <ul>
+          <li><b>2/7/21:</b> fix scrolling bug on mobile, hide images until loaded, improve performance of bg animation</li>
+          <li><b>1/24/21:</b> the big update! first batch of 11 zines w/ photos and the new scrolling layout</li>
+          <li><b>11/24/20:</b> update font to Work Sans</li>
+          <li><b>11/19/20:</b> add nav</li>
+          <li><b>11/16/20:</b> create zines page</li>
+        </ul>
+      </div>
+      <a id="hide-link">hide menu</a>
+    </div>
+    <div class="container" style="display: none">
+      <p style="margin-left: 16px">under construction!!!!! this page is taking forever bc i havent gotten around to scanning my zines...</p>
+      <h1><span class="header">my zine collection</span></h1>
+      <div class="gallery">
+        <ul>
+          <li>ceremony</li>
+          <li>bowl of snails</li>
+          <li>hong kong</li>
+          <li>undertone collective</li>
+          <li>sine theta</li>
+          <li>map of fog</li>
+          <li>summer weather</li>
+          <li>seesaw fidgets</li>
+          <li>gender&amp;, drag&amp;</li>
+          <li>junior high</li>
+          <li>fast - fall 2017, spring 2019</li>
+          <li>bside - spring 2018</li>
+          <li>kleinian theory</li>
+          <li>untitled riso zine</li>
+          <li>playlist by uchuu summer</li>
+          <li>don't</li>
+          <li>hibernation</li>
+          <li>nice guys finish second</li>
+          <li>neighborhood cats</li>
+          <li>dog worship</li>
+          <li>journal comics by kat efird</li>
+          <li>pocket landscape cartoon guide</li>
+          <li>ad, bc</li>
+          <li>maggie lawson, may 2018</li>
+          <li>substitute art teacher</li>
+          <li>i am home</li>
+        </ul>
+      </div>
+      <h1><span class="header">(mostly indie) comics</span></h1>
+      <div class="gallery">
+        <ul>
+          <li>electro cat and lightning dog</li>
+          <li>snotgirl</li>
+          <li>artist's strategy</li>
+          <li>l'or du rhin</li>
+          <li>your black friend</li>
+          <li>magical beatdown</li>
+          <li>please destroy the internet</li>
+          <li>girls</li>
+          <li>optical exercise(?)</li>
+          <li>barista</li>
+        </ul>
+      </div>
+      <h1><span class="header">japanese fashion magazines</span></h1>
+      <div class="gallery">
+        <ul>
+          <li>glb</li>
+          <li>popteen - may 2011</li>
+          <li>vivi</li>
+          <li>zipper - may 2013</li>
+          <li>jj</li>
+          <li>onkul</li>
+          <li>jelly</li>
+          <li>weem</li>
+          <li>spring</li>
+          <li>nylon japan</li>
+          <li>大人のおしゃれ手帖</li>
+        </ul>
+      </div>
+      <h1><span class="header">other magazines</span></h1>
+      <div class="gallery">
+        <ul>
+          <li>B - acne studios</li>
+          <li>slanted - 31 tokyo</li>
+          <li>tidal</li>
+        </ul>
+      </div>
+    </div>
+    <script src="/js/nav.js?v=210119" type="application/javascript"></script>
+    <script src="/js/zines.js?v=210207" type="application/javascript"></script>
+  </body>
+</html> -->
